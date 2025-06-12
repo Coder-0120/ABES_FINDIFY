@@ -1,0 +1,96 @@
+/* Container for login/register */
+.auth-container {
+  max-width: 400px;
+  margin: 6rem auto;
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.auth-container:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.auth-container h2 {
+  margin-bottom: 2.4rem;
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: #023e8a;
+  letter-spacing: 1.3px;
+  text-shadow: 0 1px 4px rgba(2, 62, 138, 0.4);
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.auth-container input {
+  padding: 0.95rem 1.2rem;
+  font-size: 1.05rem;
+  border: 2.5px solid #90caf9;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 3px;
+  box-shadow: inset 0 0 6px #e8f0fe;
+}
+
+.auth-container input:focus {
+  border-color: #f9a825;
+  box-shadow: 0 0 8px #f9a825aa, inset 0 0 6px #fff7cc;
+}
+
+.auth-container button {
+  margin-top: 1.2rem;
+  padding: 0.95rem 0;
+  background: linear-gradient(45deg, #f9a825, #fbbc04);
+  border: none;
+  border-radius: 50px;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.22rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(249, 168, 37, 0.7);
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.auth-container button:hover {
+  background: linear-gradient(45deg, #c17900, #ffca28);
+  color: white;
+  box-shadow: 0 12px 26px rgba(193, 121, 0, 0.85);
+  transform: scale(1.03);
+}
+
+.auth-footer {
+  margin-top: 1.9rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #023e8a;
+}
+
+.auth-footer a {
+  color: #f9a825;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.auth-footer a:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-container {
+    margin: 3rem 1.5rem;
+    padding: 2.5rem 2rem;
+  }
+}

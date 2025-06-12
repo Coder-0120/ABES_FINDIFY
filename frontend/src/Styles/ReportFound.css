@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  /* background: linear-gradient(135deg, #1e2235, #28304f); */
+  color: #e0e0e0;
+}
+
+.auth-container {
+  max-width: 500px;
+  margin: 6rem auto;
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  text-align: center;
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+  color: #222;
+}
+
+.auth-container:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.auth-container h2 {
+  margin-bottom: 2.4rem;
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: #023e8a;
+  letter-spacing: 1.3px;
+  text-shadow: 0 1px 4px rgba(2, 62, 138, 0.4);
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.auth-container input,
+.auth-container textarea {
+  padding: 0.95rem 1.2rem;
+  font-size: 1.05rem;
+  border: 2.5px solid #90caf9;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 3px;
+  box-shadow: inset 0 0 6px #e8f0fe;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+.auth-container textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.auth-container input[type="file"] {
+  padding: 0.4rem 1rem;
+  box-shadow: none;
+  border: 2.5px solid #90caf9;
+}
+
+.auth-container input:focus,
+.auth-container textarea:focus {
+  border-color: #f9a825;
+  box-shadow: 0 0 8px #f9a825aa, inset 0 0 6px #fff7cc;
+  outline: none;
+}
+
+.auth-container button {
+  margin-top: 1.2rem;
+  padding: 0.95rem 0;
+  background: linear-gradient(45deg, #f9a825, #fbbc04);
+  border: none;
+  border-radius: 50px;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.22rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(249, 168, 37, 0.7);
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.auth-container button:hover {
+  background: linear-gradient(45deg, #c17900, #ffca28);
+  color: white;
+  box-shadow: 0 12px 26px rgba(193, 121, 0, 0.85);
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-container {
+    margin: 3rem 1.5rem;
+    padding: 2.5rem 2rem;
+  }
+}

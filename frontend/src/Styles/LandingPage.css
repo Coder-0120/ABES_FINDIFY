@@ -1,0 +1,75 @@
+.landing-page {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.65);
+  height: 100%;
+  width: 100%;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #fbc531;
+}
+
+.hero-text span {
+  color: #00a8ff;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid #00a8ff;
+}
+
+.feature-box:hover {
+  background-color: #00a8ff;
+  color: white;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+  border-radius: 10px;
+  min-width: 120px;
+}
+
+.stat-box h2 {
+  font-size: 2rem;
+  color: #fbc531;
+  margin-bottom: 5px;
+}

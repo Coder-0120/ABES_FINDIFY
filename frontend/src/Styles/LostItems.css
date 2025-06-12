@@ -1,0 +1,184 @@
+/* Container for all items */
+.items-container {
+  padding: 2rem;
+  text-align: center;
+  color: black;
+}
+
+/* Grid layout for items */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+/* Individual item card */
+.item-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(to bottom right, #fbdcb0, #eeb258);
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  height: 100%;
+  color: black; /* make sure text inside is visible */
+}
+
+.item-card:hover {
+  transform: scale(1.02);
+}
+
+/* Image inside item card */
+.item-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Title in item card */
+h3 {
+  color: rgb(255, 6, 6);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+}
+
+/* Button container aligned center */
+.button-container {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Buttons general styles */
+button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Button specific colors */
+.button-report {
+  background-color: #78d639;
+  color: black;
+}
+
+.button-edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.button-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Button group for multiple buttons */
+.button-group {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Modal overlay styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal box styles */
+.modal {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  animation: fadeIn 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modal header */
+.modal h3 {
+  margin: 0 0 10px 0;
+  color: #b33737; /* You can adjust modal header color */
+}
+
+/* Modal textarea */
+.modal textarea {
+  width: 100%;
+  height: 100px;
+  margin: 12px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Modal buttons container */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Cancel and submit buttons */
+.btn-cancel,
+.btn-submit {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Cancel button */
+.btn-cancel {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Submit button */
+.btn-submit {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Fade in animation for modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
