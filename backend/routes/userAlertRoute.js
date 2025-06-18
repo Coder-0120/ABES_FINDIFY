@@ -1,7 +1,7 @@
 const express = require("express");
 const ClaimMine = require("../models/claimMine");
 const ClaimFound = require("../models/claimFound");
-const LostItem = require("../models/lostItem");
+const LostItem = require("../models/LostItem");
 const FoundItem = require("../models/foundItem");
 const router = express.Router();
 
