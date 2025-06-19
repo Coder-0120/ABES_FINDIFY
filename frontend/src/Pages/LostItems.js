@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../axios.js';
+
 import Navbar from '../Components/Navbar';
 import '../Styles/LostItems.css'; 
 import Footer from '../Components/Footer';
@@ -23,7 +25,7 @@ const LostItems = () => {
   useEffect(() => {
     const fetchLostItems = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/lost/all");
+        const response = await axios.get("/api/lost/all");
         setItems(response.data.lostItems);
         const footer = document.querySelector('footer');
         if (footer) {
@@ -53,7 +55,7 @@ const LostItems = () => {
         claimerEmail: reportedBy,
         message,
       };
-      const res = await axios.post("http://localhost:3000/api/claims/create", payload);
+      const res = await axios.post("/api/claims/create", payload);
       if (res.status === 201 || res.status === 200) {
         alert("Claim submitted successfully!");
         setShowModal(false);
@@ -69,7 +71,7 @@ const LostItems = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/lost/delete/${id}`);
+      const response = await axios.delete(`/api/lost/delete/${id}`);
       if (response.status === 200) {
         alert("Item deleted successfully!");
         setItems(items.filter(item => item._id !== id));
@@ -97,7 +99,7 @@ const LostItems = () => {
         date: new Date(updatedData.date).toISOString(),
       };
 
-      const res = await axios.put(`http://localhost:3000/api/lost/update/${_id}`, finalData);
+      const res = await axios.put(`/api/lost/update/${_id}`, finalData);
 
       if (res.status === 200) {
         alert("Item updated successfully!");
