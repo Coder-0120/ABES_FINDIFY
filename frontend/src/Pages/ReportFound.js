@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import '../Styles/ReportFound.css';
 import Navbar from '../Components/Navbar';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../axios.js';
 
 const ReportFound = () => {
   const navigate=useNavigate();
@@ -28,7 +29,7 @@ const ReportFound = () => {
     e.preventDefault();
 
     try{
-      const response=await axios.post("http://localhost:3000/api/found/report", formData);
+      const response=await axios.post("/api/found/report", formData);
       if(response.status===201){
         alert("🎉 Found item reported successfully!");
         navigate("/dashboard");
