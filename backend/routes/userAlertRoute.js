@@ -2,7 +2,7 @@ const express = require("express");
 const ClaimMine = require("../models/claimMine");
 const ClaimFound = require("../models/claimFound");
 const LostItem = require("../models/LostItem");
-const FoundItem = require("../models/foundItem");
+const FoundItem = require("../models/FoundItem");
 const router = express.Router();
 
 router.get("/alerts", async (req, res) => {
