@@ -16,17 +16,11 @@ dotenv.config();
 app.use(express.json());
 connectDB();
 const cors = require('cors');
-app.use(session({
-  secret: 'secret123', // ❗ Change this in production
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    httpOnly: true,
-    secure: true,          // ✅ needed on HTTPS (mobile browser requires this)
-    sameSite: 'none'       // ✅ allows cross-origin cookies
-  }
+
+app.use(cors({
+  origin: 'https://abes-findify.vercel.app', // ✅ your frontend domain
+  credentials: true // ✅ allow cookies / auth headers
 }));
-app.use(cors());
 app.use("/api/users", UserRoute); // login and register
 app.use("/api/lost", LostRoute);  // report lost items and get all lost items..delete
 app.use("/api/found", FoundRoute); // report found items and get all found items..delete
