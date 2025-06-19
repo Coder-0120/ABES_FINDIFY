@@ -68,13 +68,13 @@ router.post("/login", async (req, res) => {
     if (!isMatch) {
       return res.status(400).json({ error: "Incorrect password" });
     }
-     req.session.user = {
-    id: user._id,
-    name: user.name,
-    email: user.email
-  };
-
-     res.status(200).json({ message: 'Login successful', user: req.session.user });
+      res.status(200).json({
+      message: "Login successful",
+      user: {
+        email,
+        password
+      },
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Server error" });
