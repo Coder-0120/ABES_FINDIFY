@@ -21,7 +21,7 @@ const LoginPage = () => {
       password
     };
     try {
-      const response = await axios.post("http://localhost:3000/api/users/login", payLoad);
+      const response = await axios.post("/api/users/login", payLoad);
       localStorage.setItem("user", JSON.stringify(response.data.user));
       alert("Welcome to ABES Findify!");
       Navigate("/dashboard"); 
