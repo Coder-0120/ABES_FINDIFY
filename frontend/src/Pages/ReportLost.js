@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import '../Styles/ReportLost.css';
 import Navbar from '../Components/Navbar';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../axios.js';
 
 const ReportLost = () => {
   const navigate=useNavigate();
@@ -35,7 +36,7 @@ const reportedBy = user ? user.email : "Anonymous User";
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      const response=await axios.post("http://localhost:3000/api/lost/report",formData);
+      const response=await axios.post("/api/lost/report",formData);
       if(response.status===201){
         alert("🎉 Lost item reported successfully!");
         console.log(reportedBy);
