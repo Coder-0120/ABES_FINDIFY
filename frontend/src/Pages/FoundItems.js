@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../axios.js';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import '../Styles/LostItems.css';
@@ -19,7 +20,7 @@ const FoundItems = () => {
   useEffect(() => {
     const fetchFoundItems = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/found/all");
+        const response = await axios.get("/api/found/all");
         setItems(response.data.foundItems);
         const footer = document.querySelector('footer');
         if (footer) {
@@ -49,7 +50,7 @@ const FoundItems = () => {
           claimerEmail: reportedBy,
           message,
         };
-        const res = await axios.post("http://localhost:3000/api/claimMine/create", payload);
+        const res = await axios.post("/api/claimMine/create", payload);
         if (res.status === 201 || res.status === 200) {
           alert("Claim submitted successfully!");
           setShowModal(false);
@@ -66,7 +67,7 @@ const FoundItems = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/found/delete/${id}`);
+      const response = await axios.delete(`/api/found/delete/${id}`);
       if (response.status === 200) {
         alert("Item deleted successfully!");
         setItems(items.filter(item => item._id !== id));
@@ -95,7 +96,7 @@ const FoundItems = () => {
           date: new Date(updatedData.date).toISOString(),
         };
   
-        const res = await axios.put(`http://localhost:3000/api/found/update/${_id}`, finalData);
+        const res = await axios.put(`/api/found/update/${_id}`, finalData);
   
         if (res.status === 200) {
           alert("Item updated successfully!");
