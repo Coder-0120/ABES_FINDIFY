@@ -9,12 +9,23 @@ const UserPostsRoute = require('./routes/Userposts');
 const claimRoutes = require("./routes/claims");
 const claimMineRoutes = require("./routes/claimMineRoute");
 const userAlertRoute=require("./routes/userAlertRoute");
+const session =require("express-session");
 
 
 dotenv.config();
 app.use(express.json());
 connectDB();
 const cors = require('cors');
+app.use(session({
+  secret: 'secret123', // ❗ Change this in production
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    httpOnly: true,
+    secure: true,          // ✅ needed on HTTPS (mobile browser requires this)
+    sameSite: 'none'       // ✅ allows cross-origin cookies
+  }
+}));
 app.use(cors());
 app.use("/api/users", UserRoute); // login and register
 app.use("/api/lost", LostRoute);  // report lost items and get all lost items..delete

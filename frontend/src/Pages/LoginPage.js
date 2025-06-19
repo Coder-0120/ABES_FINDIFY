@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import '../Styles/Login.css';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from "../axios";
 
 const LoginPage = () => {
   const Navigate = useNavigate();
