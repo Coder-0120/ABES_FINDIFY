@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../axios.js';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import "../Styles/Alerts.css";
@@ -15,7 +16,7 @@ const UserAlertsPage = () => {
             return;
         }
 
-        axios.get("http://localhost:3000/api/viewall/alerts", {
+        axios.get("/api/viewall/alerts", {
             params: { email: user.email }
         })
         .then(res => {
