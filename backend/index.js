@@ -9,7 +9,7 @@ const UserPostsRoute = require('./routes/Userposts');
 const claimRoutes = require("./routes/claims");
 const claimMineRoutes = require("./routes/claimMineRoute");
 const userAlertRoute=require("./routes/userAlertRoute");
-const session =require("express-session");
+// const session =require("express-session");
 
 
 dotenv.config();
