@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../axios.js';
 import "../Styles/Mypost.css";
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
@@ -15,7 +16,7 @@ const MyPosts = () => {
       return;
     }
 
-    axios.get("http://localhost:3000/api/user/view/myposts", {
+    axios.get("/api/user/view/myposts", {
       params: { email: user.email }
     })
     .then(res => {
