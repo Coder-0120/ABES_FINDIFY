@@ -3,7 +3,7 @@ import '../Styles/Register.css';
 import {  useNavigate } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
-import axios from 'axios';
+import axios from '../axios.js';
 
 const RegisterPage = () => {
   const Navigate=useNavigate();
@@ -24,7 +24,7 @@ const RegisterPage = () => {
   };
 
   try {
-    const response = await axios.post("http://localhost:3000/api/users/register", payload);
+    const response = await axios.post("/api/users/register", payload);
 
     if (response.status === 201) {
       alert("🎉 Registration successful! Welcome to ABES Findify.");
