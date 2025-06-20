@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../Styles/Register.css';
-import {  useNavigate } from 'react-router-dom';
+import {  useNavigate,Link } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 import axios from '../axios.js';
@@ -84,7 +84,7 @@ const RegisterPage = () => {
         <button type="submit">Register</button>
       </form>
       <div className="auth-footer">
-        Already have an account? <a href="/login">Login here</a>
+        Already have an account? <Link to="/login">Login here</Link>
       </div>
     </div>
     <Footer/>
