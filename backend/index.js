@@ -18,8 +18,8 @@ connectDB();
 const cors = require('cors');
 
 app.use(cors({
-  origin: 'https://abes-findify.vercel.app', // ✅ your frontend domain
-  credentials: true // ✅ allow cookies / auth headers
+  origin: 'https://abes-findify.vercel.app', // your frontend domain
+  credentials: true // allow cookies / auth headers
 }));
 app.use("/api/users", UserRoute); // login and register
 app.use("/api/lost", LostRoute);  // report lost items and get all lost items..delete
