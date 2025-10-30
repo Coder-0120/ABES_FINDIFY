@@ -25,7 +25,7 @@ const reportedBy = user ? user.email : "Anonymous User";
   });
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
+    const { name, value } = e.target;
     setFormData({
       ...formData,
       reportedBy: reportedBy
