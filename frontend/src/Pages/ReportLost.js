@@ -28,8 +28,7 @@ const reportedBy = user ? user.email : "Anonymous User";
     const { name, value, files } = e.target;
     setFormData({
       ...formData,
-      reportedBy: reportedBy,
-      [name]: name === 'image' ? files[0] : value,
+      reportedBy: reportedBy
     });
   };
 
@@ -98,12 +97,7 @@ const reportedBy = user ? user.email : "Anonymous User";
           onChange={handleChange}
         />
 
-        // <input
-        //   type="file"
-        //   name="image"
-        //   accept="image/*"
-        //   onChange={handleChange}
-        // />
+      
 
         <button type="submit">Submit Lost Item</button>
       </form>
