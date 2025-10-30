@@ -18,10 +18,9 @@ const ReportFound = () => {
   });
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
+    const { name, value } = e.target;
     setFormData({
-      ...formData,
-      [name]: name === 'image' ? files[0] : value,
+      ...formData
     });
   };
 
@@ -90,13 +89,7 @@ const ReportFound = () => {
           onChange={handleChange}
         />
 
-        // <input
-        //   type="file"
-        //   name="image"
-        //   accept="image/*"
-        //   onChange={handleChange}
-        // />
-
+       
         <button type="submit">Submit Found Item</button>
       </form>
     </div>
