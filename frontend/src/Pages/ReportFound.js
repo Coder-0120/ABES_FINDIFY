@@ -90,12 +90,12 @@ const ReportFound = () => {
           onChange={handleChange}
         />
 
-        <input
-          type="file"
-          name="image"
-          accept="image/*"
-          onChange={handleChange}
-        />
+        // <input
+        //   type="file"
+        //   name="image"
+        //   accept="image/*"
+        //   onChange={handleChange}
+        // />
 
         <button type="submit">Submit Found Item</button>
       </form>
