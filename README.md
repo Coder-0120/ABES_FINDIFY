@@ -3,6 +3,10 @@
 **ABES-Findify** is a **Lost & Found Portal** designed specifically for **ABES Engineering College students**.  
 The platform helps students easily report lost items, report found items, and connect with each other to recover belongings within the campus.
 
+
+<img width="1902" height="1080" alt="Screenshot (66)" src="https://github.com/user-attachments/assets/9424e248-edce-40ae-a721-43c5576a8431" />
+
+
 ---
 
 ## 📌 Problem Statement
